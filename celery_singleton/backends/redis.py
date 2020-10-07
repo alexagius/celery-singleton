@@ -1,5 +1,5 @@
 import redis
-Redis = redis.Redis()
+Redis = redis.Redis
 from .base import BaseBackend
 
 
