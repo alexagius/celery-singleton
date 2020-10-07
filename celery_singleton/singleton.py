@@ -115,7 +115,9 @@ class Singleton(BaseTask):
             existing_task_id = self.get_existing_task_id(lock)
         return self.on_duplicate(existing_task_id)
 
-    def lock_and_run(self, lock, *args, task_id=None, **kwargs):
+    def lock_and_run(self, lock, *args, **kwargs):
+        if 'task_id' in kwargs:
+            task_id=kwargs['task_id']
         lock_aquired = self.aquire_lock(lock, task_id)
         if lock_aquired:
             try:
