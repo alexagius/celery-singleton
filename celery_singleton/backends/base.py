@@ -1,5 +1,6 @@
 from abc import abstractmethod
 # compatible with Python 2 *and* 3:
+# https://stackoverflow.com/a/38668373
 import abc
 ABC = abc.ABCMeta('ABC', (object,), {'__slots__': ()})
 
