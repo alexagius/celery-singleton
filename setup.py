@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup,find_packages
 
 setup(
     name='celery-singleton',
@@ -12,5 +12,5 @@ setup(
         'celery>=4.0.0',
         'redis>=2.10.5'
     ],
-    packages=['celery_singleton']
+    packages=[find_packages()]
 )
