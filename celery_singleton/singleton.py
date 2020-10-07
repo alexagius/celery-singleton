@@ -2,10 +2,10 @@ from celery import Task as BaseTask
 from kombu.utils.uuid import uuid
 import inspect
 
-from .backends import get_backend
-from .config import Config
-from .exceptions import DuplicateTaskError
-from . import util
+from backends import get_backend
+from config import Config
+from exceptions import DuplicateTaskError
+import util
 
 
 def clear_locks(app):
