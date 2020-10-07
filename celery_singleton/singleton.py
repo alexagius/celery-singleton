@@ -117,7 +117,9 @@ class Singleton(BaseTask):
 
     def lock_and_run(self, lock, *args, **kwargs):
         if 'task_id' in kwargs:
-            task_id=kwargs['task_id']
+            task_id = kwargs['task_id']
+        else:
+            task_id = None
         lock_aquired = self.aquire_lock(lock, task_id)
         if lock_aquired:
             try:

@@ -10,6 +10,7 @@ def get_backend(config):
     Get the celery-singleton backend.
     The backend instance is cached for subsequent calls.
 
+    :param config:
     :param app: celery instance
     :type app: celery.Celery
     """
