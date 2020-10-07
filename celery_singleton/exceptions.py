@@ -10,6 +10,6 @@ class DuplicateTaskError(CelerySingletonException):
 
     def __init__(self, message, task_id):
         self.task_id = task_id
-        super().__init__(message)
+        super(self).__init__(message)
 
     pass
