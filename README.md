@@ -1,5 +1,7 @@
 # Celery-Singleton
 
+Hello!
+
 Duplicate tasks clogging up your message broker? Do time based rate limits make you feel icky? Look no further!
 This is a baseclass for celery tasks that ensures only one instance of the task can be queued or running at any given time. Uses the task's name+arguments to determine uniqueness.
 
