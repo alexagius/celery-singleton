@@ -1,5 +1,7 @@
-from abc import ABC, abstractmethod
-
+from abc import abstractmethod
+# compatible with Python 2 *and* 3:
+import abc
+ABC = abc.ABCMeta('ABC', (object,), {'__slots__': ()})
 
 class BaseBackend(ABC):
     @abstractmethod
