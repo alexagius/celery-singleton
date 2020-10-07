@@ -1,5 +1,5 @@
-
-
+import redis
+Redis = redis.Redis()
 from .base import BaseBackend
 
 
@@ -8,7 +8,7 @@ class RedisBackend(BaseBackend):
         """
         args and kwargs are forwarded to redis.from_url
         """
-        from redis import Redis
+
         self.redis = Redis.from_url(*args, decode_responses=True, **kwargs)
 
     def lock(self, lock, task_id, expiry=None):
